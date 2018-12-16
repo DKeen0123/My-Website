@@ -1,1 +1,4 @@
-export default () => <div>Welcome to next.js!</div>;
+import Page from '../components/Page';
+const Index = () => <Page />;
+
+export default Index;
