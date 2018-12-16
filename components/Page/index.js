@@ -37,8 +37,8 @@ const Inner = styled.div`
 
 injectGlobal`
   @font-face {
-    font-family: 'radnika_next';
-    src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
+		font-family: 'Karla', sans-serif;
+    src: url('/static/Karla-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
   }
@@ -54,13 +54,13 @@ injectGlobal`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'radnika_next';
+    font-family: 'Karla';
   }
   a {
     text-decoration: none;
     color: ${theme.colors.neutral.xdark};
   }
-  button {  font-family: 'radnika_next'; }
+  button {  font-family: 'Karla'; }
 `;
 
 class Page extends Component {

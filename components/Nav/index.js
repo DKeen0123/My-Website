@@ -3,17 +3,14 @@ import NavStyles from './styles';
 
 const Nav = () => (
 	<NavStyles data-test="nav">
-		<Link href="/items">
-			<a>Shop</a>
+		<Link href="/about">
+			<a>About</a>
 		</Link>
-		<Link href="/sell">
-			<a>Sell</a>
+		<Link href="/portfolio">
+			<a>Portfolio</a>
 		</Link>
-		<Link href="/orders">
-			<a>Orders</a>
-		</Link>
-		<Link href="/me">
-			<a>Account</a>
+		<Link href="/contact">
+			<a>Contact</a>
 		</Link>
 	</NavStyles>
 );
