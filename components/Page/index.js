@@ -15,13 +15,14 @@ const theme = {
 			xdark: '#212B36'
 		}
 	},
-	red: '#FF0000',
-	black: '#393939',
-	grey: '#3A3A3A',
-	lightgrey: '#E1E1E1',
-	offWhite: '#EDEDED',
-	maxWidth: '1000px',
-	bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)'
+	spacing: {
+		xs: '4px',
+		sm: '8px',
+		md: '16px',
+		lg: '24px',
+		xl: '32px'
+	},
+	maxWidth: '1200px'
 };
 
 const StyledPage = styled.div`
@@ -54,8 +55,14 @@ injectGlobal`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'Karla';
-  }
+		font-family: 'Karla';
+		opacity: 1;
+    transition: 1s opacity;
+	}
+	body.fade-out {
+		opacity: 0;
+		transition: none;
+	}
   a {
     text-decoration: none;
     color: ${theme.colors.neutral.xdark};

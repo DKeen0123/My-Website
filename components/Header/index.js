@@ -1,26 +1,25 @@
 import Link from 'next/link';
-// import Router from 'next/router';
-// import NProgress from 'nprogress';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 import styled from 'styled-components';
 import Nav from '../Nav';
 
-// Router.onRouteChangeStart = () => {
-// 	NProgress.start();
-// };
-// Router.onRouteChangeComplete = () => {
-// 	NProgress.done();
-// };
-// Router.onRouteChangeError = () => {
-// 	NProgress.done();
-// };
+Router.onRouteChangeStart = () => {
+	NProgress.start();
+};
+Router.onRouteChangeComplete = () => {
+	NProgress.done();
+};
+Router.onRouteChangeError = () => {
+	NProgress.done();
+};
 
 const MainWrapper = styled.div`
-	max-width: 1200px;
+	max-width: ${(props) => props.theme.maxWidth};
 	margin: auto;
 `;
 
 const LogoWrapper = styled.div`
-	margin-left: 2rem;
 	position: relative;
 	z-index: 2;
 	a {
@@ -33,8 +32,8 @@ const LogoWrapper = styled.div`
 `;
 
 const StyledHeader = styled.header`
-	background-color: ${(props) => props.theme.colors.neutral.xlight};
-	border-bottom: 1px solid ${(props) => props.theme.colors.neutral.base};
+	/* background-color: ${(props) => props.theme.colors.neutral.xlight}; */
+	/* border-bottom: 1px solid ${(props) => props.theme.colors.neutral.base}; */
 
 	.bar {
 		display: grid;

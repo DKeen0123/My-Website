@@ -3,7 +3,7 @@ import NavStyles from './styles';
 
 const Nav = () => (
 	<NavStyles data-test="nav">
-		<Link href="/about">
+		<Link href="/">
 			<a>About</a>
 		</Link>
 		<Link href="/portfolio">
