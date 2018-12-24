@@ -3,9 +3,12 @@ import { rem } from 'polished';
 
 export const H1 = styled.h1`
 	font-size: ${rem('76px')};
+	font-weight: 500;
+	margin: 0;
 
 	@media (max-width: 700px) {
 		font-size: ${rem('56px')};
+		margin-bottom: ${rem('32px')};
 		line-height: 1.5;
 	}
 `;

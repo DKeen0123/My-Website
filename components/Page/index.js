@@ -45,7 +45,8 @@ injectGlobal`
   }
   html {
     box-sizing: border-box;
-    font-size: 10px;
+		font-size: 10px;
+		color: ${(props) => props.theme.colors.neutral.xdark};
   }
   *, *:before, *:after {
     box-sizing: inherit;
