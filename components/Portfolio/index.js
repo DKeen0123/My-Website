@@ -76,16 +76,19 @@ const PortfolioItemDescription = styled.p`
 const OverlayWrapper = styled.div`
 	opacity: 0;
 	transition: opacity 0.25s ease-in-out;
+	cursor: pointer;
 
 	&:hover {
 		opacity: 1;
 	}
 `;
 
-const PortfolioItem = ({ image, title, description, githubLink }) => (
+const PortfolioItem = ({ image, title, description, githubLink, webLink }) => (
 	<PortfolioItemWrapper>
 		<OverlayWrapper>
-			<PortfolioItemOverlay />
+			<a href={webLink} target="_blank">
+				<PortfolioItemOverlay />
+			</a>
 			<a href={githubLink} target="_blank">
 				<GithubIconOverlay>
 					<source srcSet="../../static/Github-Mark-Light.png" media="(min-width: 500px)" />
@@ -108,24 +111,28 @@ const Portfolio = () => (
 				title="SentiMind"
 				description="A Twitter sentiment analysis tool"
 				githubLink="https://github.com/DKeen0123/SentiMind"
+				webLink="http://sentimind.co.uk/"
 			/>
 			<PortfolioItem
 				image="../../static/wellmo.png"
 				title="WellMo"
 				description="A mood check in tool"
 				githubLink="https://github.com/DKeen0123/WellMo"
+				webLink="https://wellmo.herokuapp.com/"
 			/>
 			<PortfolioItem
 				image="../../static/sick-fits.png"
 				title="Sick Fits"
 				description="A retail store using Next.js and GraphQL"
 				githubLink="https://github.com/DKeen0123/Advanced-React"
+				webLink="https://github.com/DKeen0123/Advanced-React"
 			/>
 			<PortfolioItem
 				image="../../static/quote-machine.png"
 				title="Random Quote Machine"
 				description="A Random quote generator"
 				githubLink="https://github.com/DKeen0123/ReactQuoteMachine"
+				webLink="https://github.com/DKeen0123/ReactQuoteMachine"
 			/>
 		</PortfolioWrapper>
 	</Fragment>
