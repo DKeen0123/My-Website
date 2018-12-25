@@ -27,7 +27,7 @@ export const TitleText = styled.p`
 	}
 
 	a:hover {
-		color: ${(props) => props.theme.colors.neutral.middark};
+		color: ${(props) => props.theme.colors.neutral.base};
 	}
 
 	@media (max-width: 700px) {
@@ -35,3 +35,5 @@ export const TitleText = styled.p`
 		margin-bottom: ${rem('24px')};
 	}
 `;
+
+export const Header = styled.h2`font-weight: normal;`;
