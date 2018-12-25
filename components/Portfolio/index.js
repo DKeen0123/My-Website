@@ -30,7 +30,7 @@ const PortfolioItemOverlay = styled.div`
 	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 `;
 
-const GithubIconOverlay = styled.img`
+const GithubIconOverlay = styled.picture`
 	position: absolute;
 	left: 40%;
 	bottom: 40%;
@@ -59,7 +59,7 @@ const PortfolioItemHeader = styled.h3`
 	&:after {
 		content: "";
 		border-bottom: 1px solid ${(props) => props.theme.colors.neutral.xlight};
-		width: 20%;
+		width: ${rem('24px')};
 		display: block;
 		z-index: 10;
 	}
@@ -87,7 +87,10 @@ const PortfolioItem = ({ image, title, description, githubLink }) => (
 		<OverlayWrapper>
 			<PortfolioItemOverlay />
 			<a href={githubLink} target="_blank">
-				<GithubIconOverlay src="../../static/Github-Mark-Light.png" />
+				<GithubIconOverlay>
+					<source srcSet="../../static/Github-Mark-Light.png" media="(min-width: 500px)" />
+					<img src="../../static/Github-Mark-Light-64px.png" />
+				</GithubIconOverlay>
 			</a>
 			<PortfolioItemHeader>{title}</PortfolioItemHeader>
 			<PortfolioItemDescription>{description}</PortfolioItemDescription>
