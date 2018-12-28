@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 import { H1, TitleText } from '../style/typography';
 
-const HeroWrapper = styled.div`margin-top: ${rem('150px')};`;
+const HeroWrapper = styled.div`
+	margin-top: ${rem('150px')};
+	height: 100vh;
+`;
 
 const About = () => (
 	<HeroWrapper>
