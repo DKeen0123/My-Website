@@ -1,9 +1,5 @@
-import Page from '../components/Page';
 import About from '../components/About';
-const Index = () => (
-	<Page>
-		<About />
-	</Page>
-);
+
+const Index = () => <About />;
 
 export default Index;
