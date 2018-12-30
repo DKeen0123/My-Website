@@ -5,6 +5,7 @@ import { rem } from 'polished';
 import { H1, TitleText } from '../style/typography';
 
 const HeroWrapper = styled.div`
+	position: relative;
 	margin-top: ${rem('150px')};
 	height: 100vh;
 `;
@@ -12,11 +13,12 @@ const HeroWrapper = styled.div`
 const About = () => (
 	<HeroWrapper>
 		<H1>Hello, my name is Dan.</H1>
-		<TitleText>I am a front End Developer focused on building beautiful, interactive UI.</TitleText>
+		<TitleText>I am a Software Developer based in London, UK.</TitleText>
 		<TitleText>
 			<Link href="/portfolio">
 				<a>Check out my work</a>
 			</Link>
+			,&nbsp;or find out more about me and what I do below.
 		</TitleText>
 	</HeroWrapper>
 );

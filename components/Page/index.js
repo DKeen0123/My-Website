@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'next/router';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import Header from '../Header';
 import Meta from '../Meta';
@@ -32,6 +33,13 @@ const StyledPage = styled.div`
 	position: relative;
 	min-height: 100%;
 	padding-bottom: 120px;
+`;
+
+const ArrowIconDown = styled.img`
+	margin: 0 auto;
+	display: block;
+	position: absolute;
+	bottom: 0;
 `;
 
 const Inner = styled.div`
@@ -83,13 +91,20 @@ injectGlobal`
 `;
 
 class Page extends Component {
+	constructor(props) {
+		super(props);
+	}
 	render() {
+		console.log(this.props.router.pathname);
 		return (
 			<ThemeProvider theme={theme}>
 				<StyledPage>
 					<Meta />
 					<Header />
-					<Inner>{this.props.children}</Inner>
+					<Inner>
+						{this.props.children}
+						<ArrowIconDown src="../../static/arrow-down.png" height="64" width="64" />
+					</Inner>
 					<Footer />
 				</StyledPage>
 			</ThemeProvider>
@@ -97,4 +112,4 @@ class Page extends Component {
 	}
 }
 
-export default Page;
+export default withRouter(Page);
