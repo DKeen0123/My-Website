@@ -12,7 +12,7 @@ const HeroWrapper = styled.div`
 const About = () => (
 	<HeroWrapper>
 		<H1>Hello, my name is Dan.</H1>
-		<TitleText>I am a front End Developer focused on building beautiful, interactive UI.</TitleText>
+		<TitleText>I am a front End Developer based in London, UK.</TitleText>
 		<TitleText>
 			<Link href="/portfolio">
 				<a>Check out my work</a>
